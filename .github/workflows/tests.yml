@@ -51,7 +51,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          composer update --prefer-dist --no-interaction --no-progress --with "illuminate/contracts=^${{ matrix.laravel }}"
+          composer update --prefer-dist --no-interaction --no-progress --with "illuminate/contracts=^${{ matrix.laravel }}" --ignore-platform-req=php+
 
       - name: Execute tests
         run: vendor/bin/phpunit
